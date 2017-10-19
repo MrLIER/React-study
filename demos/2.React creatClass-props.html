@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React.createClass</title>
+    <script src="../source/react.js"></script>
+    <script src="../source/react-dom.js"></script>
+    <script src="../source/babel.min.js"></script>
+</head>
+<body>
+    <div id="demo"></div>
+    <script type="text/babel">
+        var HelloClass=React.createClass({
+            render:function(){
+                return <h1>{this.props.info}</h1>;
+            }
+        });
+        ReactDOM.render(
+            <HelloClass info="React.createClass用于创建一个组件,组件名称必须大写，可以使用this.props.xx获取组件的属性" />,
+            document.getElementById('demo')
+        )
+    </script>
+</body>
+</html>

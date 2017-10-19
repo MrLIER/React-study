@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PropTypes验证属性是否符合要求</title>
+    <script src="../source/react.js"></script>
+    <script src="../source/react-dom.js"></script>
+    <script src="../source/babel.min.js"></script>
+</head>
+<body>
+    <div id="demo"></div>
+    <script type="text/babel">
+        var testprops='PropTypes验证属性是否符合要求';
+        var testnum=false;
+        var PropTypesClass=React.createClass({
+            PropTypes:{
+                title: React.PropTypes.string.isRequired,
+            },
+            render:function(){
+                return <h1>{this.props.title}</h1>
+            }
+        });
+        ReactDOM.render(
+            <PropTypesClass title={testnum} />,
+            document.getElementById('demo')
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello World-1</title>
+    <script src="../source/react.js"></script>
+    <script src="../source/react-dom.js"></script>
+    <script src="../source/babel.min.js"></script>
+</head>
+<body>
+   <div id="demo"></div>
+   <div id="test"></div>
+   <div id="testelement"></div>
+   <script type="text/babel">
+    let names=['aa','bb','cc'];
+    ReactDOM.render(
+        <div>
+        {names.map(function(name){return <div>Hello {name} !</div>})}
+        </div>,
+        document.getElementById('demo')
+    )
+    
+    let testArr=['AA','BB','CC'];
+    ReactDOM.render(
+        <div>{testArr}</div>,
+        document.getElementById('test')
+    )
+
+    let testArr2=[<h1>HELLO WORLD!</h1>,<h2>DON'T BE FAT</h2>];
+    ReactDOM.render(
+        <div>{testArr2}</div>,
+        document.getElementById('testelement')
+    )
+   </script>
+</body>
+</html>
