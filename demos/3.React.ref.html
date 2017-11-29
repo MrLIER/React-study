@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this.refs.[refname]</title>
+    <script src="../source/react.js"></script>
+    <script src="../source/react-dom.js"></script>
+    <script src="../source/babel.min.js"></script>
+</head>
+<body>
+    <div id="demo"></div>
+    <script type="text/babel">
+        var Refconpoment=React.createClass({
+            handleClick:function(){
+                this.refs.textInput.focus();
+            },
+            render:function(){
+                return (
+                    <div>
+                        <input type="text" ref='textInput' />
+                        <button onClick={this.handleClick}>Click focus the input</button>
+                    </div>
+                );
+            }
+        });
+        ReactDOM.render(
+            <Refconpoment />,
+            document.getElementById('demo')
+        )
+    </script>
+</body>
+</html>
